@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    <group name="General">
+
+        <entry name="leftClickAction" type="Int">
+            <label>What a left click does: 0 switches to the next output, 1 shows the menu</label>
+            <default>1</default>
+            <min>0</min>
+            <max>1</max>
+        </entry>
+
+        <entry name="middleClickAction" type="Int">
+            <label>What a middle click does: 0 switches to the next output, 1 shows the menu</label>
+            <default>0</default>
+            <min>0</min>
+            <max>1</max>
+        </entry>
+
+        <entry name="deviceOrder" type="StringList">
+            <label>Device names (PulseAudio) in rotation order</label>
+            <default></default>
+        </entry>
+
+        <entry name="excludedDevices" type="StringList">
+            <label>Device names (PulseAudio) skipped by the rotation</label>
+            <default></default>
+        </entry>
+
+        <entry name="deviceIcons" type="String">
+            <label>Custom icon per device, as a JSON object of PulseAudio device name to icon name</label>
+            <default>{}</default>
+        </entry>
+
+    </group>
+</kcfg>

@@ -1,0 +1,22 @@
+{
+    "KPlugin": {
+        "Id": "cl.moxwel.audioswitch",
+        "Name": "Audio Switch",
+        "Description": "Switches and rotates the default audio output device",
+        "Description[es]": "Cambia y rota el dispositivo de salida de audio predeterminado",
+        "Icon": "audio-speakers",
+        "Category": "System Information",
+        "License": "GPL-3.0-or-later",
+        "Version": "1.0.0",
+        "Authors": [
+            {
+                "Name": "moxwel",
+                "Email": "moxwelderg@gmail.com"
+            }
+        ],
+        "Website": "https://github.com/moxwel/audioswitch-plasmoid",
+        "BugReportUrl": "https://github.com/moxwel/audioswitch-plasmoid/issues"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "KPackageStructure": "Plasma/Applet"
+}
