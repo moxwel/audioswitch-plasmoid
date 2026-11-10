@@ -1,0 +1,86 @@
+# Spanish translation of the Audio Switch widget.
+msgid ""
+msgstr ""
+"Project-Id-Version: Audio Switch\n"
+"Report-Msgid-Bugs-To: https://github.com/moxwel/audioswitch-plasmoid/issues\n"
+"POT-Creation-Date: 2026-11-10 17:26-0300\n"
+"PO-Revision-Date: 2026-11-10 14:24-0300\n"
+"Last-Translator: moxwel\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: contents/config/config.qml:6 contents/ui/OutputList.qml:50
+msgid "Output devices"
+msgstr "Dispositivos de salida"
+
+#: contents/config/config.qml:12
+msgid "General"
+msgstr "General"
+
+#: contents/ui/configDevices.qml:112
+msgid ""
+"Drag to set the order, untick a device to skip it and pick an icon to "
+"replace the one the system gives it."
+msgstr ""
+"Arrastra para definir el orden, desmarca un dispositivo para omitirlo y "
+"elige un icono para reemplazar el que le da el sistema."
+
+#: contents/ui/configDevices.qml:128
+msgid "No output devices found"
+msgstr "No se encontraron dispositivos de salida"
+
+#: contents/ui/configDevices.qml:129 contents/ui/main.qml:31
+msgid "Connect speakers or headphones and they will show up here"
+msgstr "Conecta parlantes o audífonos y aparecerán aquí"
+
+#: contents/ui/configDevices.qml:172
+msgid "Include %1 in the rotation"
+msgstr "Incluir %1 en la rotación"
+
+#: contents/ui/configDevices.qml:184
+msgid "Choose icon for %1"
+msgstr "Elegir icono para %1"
+
+#: contents/ui/configDevices.qml:209
+msgid "Reset icon of %1"
+msgstr "Restablecer el icono de %1"
+
+#: contents/ui/configGeneral.qml:16
+msgid "Switch output"
+msgstr "Cambiar salida"
+
+#: contents/ui/configGeneral.qml:16
+msgid "Menu"
+msgstr "Menú"
+
+#: contents/ui/configGeneral.qml:21
+msgid "Left click:"
+msgstr "Click izquierdo:"
+
+#: contents/ui/configGeneral.qml:27
+msgid "Middle click:"
+msgstr "Click medio:"
+
+#: contents/ui/main.qml:30
+msgid "No output devices"
+msgstr "No hay dispositivos de salida"
+
+#: contents/ui/OutputList.qml:36
+msgid "Enabled"
+msgstr "Habilitados"
+
+#: contents/ui/OutputList.qml:37
+msgid "Skipped"
+msgstr "Omitidos"
+
+#: contents/ui/OutputList.qml:60
+msgid "Open settings"
+msgstr "Abrir ajustes"
+
+#: contents/ui/OutputList.qml:73
+msgid "Keep open"
+msgstr "Mantener abierto"

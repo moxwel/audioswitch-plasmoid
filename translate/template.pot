@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Audio Switch package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Audio Switch\n"
+"Report-Msgid-Bugs-To: https://github.com/moxwel/audioswitch-plasmoid/issues\n"
+"POT-Creation-Date: 2026-11-10 17:26-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/config/config.qml:6 contents/ui/OutputList.qml:50
+msgid "Output devices"
+msgstr ""
+
+#: contents/config/config.qml:12
+msgid "General"
+msgstr ""
+
+#: contents/ui/configDevices.qml:112
+msgid ""
+"Drag to set the order, untick a device to skip it and pick an icon to "
+"replace the one the system gives it."
+msgstr ""
+
+#: contents/ui/configDevices.qml:128
+msgid "No output devices found"
+msgstr ""
+
+#: contents/ui/configDevices.qml:129 contents/ui/main.qml:31
+msgid "Connect speakers or headphones and they will show up here"
+msgstr ""
+
+#: contents/ui/configDevices.qml:172
+msgid "Include %1 in the rotation"
+msgstr ""
+
+#: contents/ui/configDevices.qml:184
+msgid "Choose icon for %1"
+msgstr ""
+
+#: contents/ui/configDevices.qml:209
+msgid "Reset icon of %1"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:16
+msgid "Switch output"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:16
+msgid "Menu"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:21
+msgid "Left click:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:27
+msgid "Middle click:"
+msgstr ""
+
+#: contents/ui/main.qml:30
+msgid "No output devices"
+msgstr ""
+
+#: contents/ui/OutputList.qml:36
+msgid "Enabled"
+msgstr ""
+
+#: contents/ui/OutputList.qml:37
+msgid "Skipped"
+msgstr ""
+
+#: contents/ui/OutputList.qml:60
+msgid "Open settings"
+msgstr ""
+
+#: contents/ui/OutputList.qml:73
+msgid "Keep open"
+msgstr ""
