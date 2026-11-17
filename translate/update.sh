@@ -1,6 +1,5 @@
 #!/bin/sh
-# Refresh template.pot from the i18n() calls in contents/ and merge it into every <lang>.po, so new strings
-# show up untranslated and removed ones are marked obsolete. Compiling the .po files is compile.sh's job.
+# Refresh template.pot from the i18n() calls in contents/ and merge it into every <lang>.po.
 #
 # Usage:
 #   translate/update.sh   refresh template.pot and every <lang>.po
@@ -32,9 +31,17 @@ require_tool xgettext
 require_tool msgmerge
 require_tool msgfmt
 
+is_same_template() {
+    [ -f "$2" ] || return 1
+    [ "$(grep -v '^"POT-Creation-Date:' "$1")" = "$(grep -v '^"POT-Creation-Date:' "$2")" ]
+}
+
 SOURCES=$(find contents -name '*.qml' | sort)
 SOURCE_COUNT=$(echo "$SOURCES" | wc -l)
 log "Extracting i18n() strings from $SOURCE_COUNT .qml files in contents/..."
+
+NEW_TEMPLATE=$(mktemp)
+trap 'rm -f "$NEW_TEMPLATE"' EXIT
 
 # $SOURCES is split on purpose: one argument per file.
 # shellcheck disable=SC2086
@@ -47,17 +54,23 @@ xgettext \
     --keyword=i18ncp:1c,2,3 \
     --package-name="Audio Switch" \
     --msgid-bugs-address="https://github.com/moxwel/audioswitch-plasmoid/issues" \
-    --output=translate/template.pot \
+    --add-location=file \
+    --output="$NEW_TEMPLATE" \
     $SOURCES
 
-MESSAGE_COUNT=$(grep -c '^msgid ' translate/template.pot)
-log "  wrote translate/template.pot ($((MESSAGE_COUNT - 1)) messages)"
+MESSAGE_COUNT=$(grep -c '^msgid ' "$NEW_TEMPLATE")
+if is_same_template "$NEW_TEMPLATE" translate/template.pot; then
+    log "  no string changes, kept translate/template.pot ($((MESSAGE_COUNT - 1)) messages)"
+else
+    cat "$NEW_TEMPLATE" > translate/template.pot
+    log "  wrote translate/template.pot ($((MESSAGE_COUNT - 1)) messages)"
+fi
 
 LANG_COUNT=0
 for po in translate/*.po; do
     [ -e "$po" ] || continue
     log "Merging template.pot into $po..."
-    msgmerge --quiet --update --backup=none "$po" translate/template.pot
+    msgmerge --quiet --update --backup=none --add-location=file "$po" translate/template.pot
     log "  $(msgfmt --statistics -o /dev/null "$po" 2>&1)"
     LANG_COUNT=$((LANG_COUNT + 1))
 done
