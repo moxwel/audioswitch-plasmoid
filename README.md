@@ -6,6 +6,23 @@ It uses `org.kde.plasma.private.volume`, the same QML module Plasma's own volume
 
 > This is a learning project to help me learn more about KDE Plasma development, so I welcome any feedback or suggestions.
 
+## Screenshots
+
+### Usage
+
+![Usage](./docs/usage3.gif)
+<p>
+  <img src="./docs/usage1.png" width="49%" />
+  <img src="./docs/usage2.png" width="49%" />
+</p>
+
+### Settings
+
+<p>
+  <img src="./docs/config1.png" width="49%" />
+  <img src="./docs/config2.png" width="49%" />
+</p>
+
 ## Usage
 
 The icon follows the current output device and the tooltip names it. Each device gets the icon the system reports for it (speaker, headset...), or headphones when it reports none.
